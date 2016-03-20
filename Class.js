@@ -212,6 +212,8 @@ Class("Set",NObject,{
 		document.write(this.list.join(','));
 	}
 });
+
+
 /**
  * create the instance for Set
  */
