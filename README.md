@@ -2,7 +2,7 @@
 JS Class
 
 
- ##create the instance for NObject
+ ## create the instance for NObject
         var obj=new NObject();
         console.log(obj);
         console.log(obj.windowId);  //
