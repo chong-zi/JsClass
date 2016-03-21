@@ -1,8 +1,58 @@
 # JsClass
-JS Class
 
+JS Class is a frame for using js to create a class which like Java
 
- ## create the instance for NObject
+    Class Set extend Nobject{
+        private List list=new ArrayList(),
+        public Set(List list)
+        {
+            this.list=list;
+        }
+        public void push(Object o)
+        {
+            this.list.add(o);
+        }
+        public void print()
+        {
+            System.out.println(this.list);
+        }
+    }
+    use==>
+    Set s=new Set(new ArrayList());
+    s.push("xxx");
+    ....
+    ....
+   Use JsClass you can create this class like this:
+   
+    Class("Set",NObject,{
+                list:[],
+                Set:function(list)
+                {
+                    if(list!=null)
+                        this.list=list;
+                },
+                push:function(d)
+                {
+                    this.list.push(d);
+                },
+                print:function()
+                {
+                    document.write(this.list.join(','));
+                }
+            });
+    use==>
+    var s=new Set([]);
+    s.push("xxx");
+    ....
+    ....
+    
+    
+
+# Demo
+
+      /**
+       create the instance for NObject
+      */
         var obj=new NObject();
         console.log(obj);
         console.log(obj.windowId);  //
@@ -10,8 +60,8 @@ JS Class
 
         var obj1=new NObject();
         console.log(obj1);
-        console.log(obj1.windowId);  //
-        console.log(window[obj1.windowId]==obj1);  //
+        console.log(obj1.windowId);  //will print the global id of the obj1
+        console.log(window[obj1.windowId]==obj1);  //true
 
 
         /**
