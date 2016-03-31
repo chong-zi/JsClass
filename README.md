@@ -2,6 +2,8 @@
 
 JS Class is a frame for using js to create a class which like Java
 
+java code like this:
+
     Class Set extend Nobject{
         private List list=new ArrayList(),
         public Set(List list)
@@ -22,7 +24,7 @@ JS Class is a frame for using js to create a class which like Java
     s.push("xxx");
     ....
     ....
-   Use JsClass you can create this class like this:
+   Use JsClass you can create class like this:
    
     Class("Set",NObject,{
                 list:[],
